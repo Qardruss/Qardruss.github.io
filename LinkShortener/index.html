@@ -5,6 +5,30 @@
         <title>Link Shortener</title>
     </head>
     <body>
+        <script>
+        function postMessageToDiscord(message) {
+
+  message = message;
+
+  var discordUrl = 'https://discord.com/api/webhooks/817762058983833671/TVDG2V9WZBX_va-TKsd3rGi0NAn8K4isIFBp4LzkWZ8RjKT4HSjVnsGCjO04K5zjZjom';
+  var payload = JSON.stringify({content: message});
+
+  var params = {
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    method: "POST",
+    payload: payload,
+    muteHttpExceptions: true
+  };
+        
+
+  var response = UrlFetchApp.fetch(discordUrl, params);
+
+  Logger.log(response.getContentText());
+
+}       
+        </script>
         <h1>Link Shortener</h1>
         <br>
         <p>Shorten your links to .tdb!</p>
@@ -13,6 +37,7 @@
         <p>This uses the GitHub .tdb project to create shortened links</p>
         <br>
         <br>
-        <textarea name="Text1" cols="40" rows="5" placeholder="Enter your non-shortened link, then wait for it to be validated and then accepted and shortened"></textarea>
+        <textarea name="Text1" id="lors2" cols="40" rows="5" placeholder="Enter your non-shortened link, then wait for it to be validated and then accepted and shortened"></textarea>
+        <button text="Submit" onclick="postMessageToDiscord(document.getElementById("lors2").value)">Submit</button>
     </body>
 </html>
