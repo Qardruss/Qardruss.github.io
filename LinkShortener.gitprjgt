@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Link Shortener</title>
+    </head>
+    <body>
+        <h1>Link Shortener</h1>
+        <br>
+        <p>Shorten your links to .tdb!</p>
+        <br>
+        <br>
+        <p>This uses the GitHub .tdb project to create shortened links</p>
+        <br>
+        <br>
+        <input type="text" placeholder="Enter your non-shortened link, then wait for it to be validated and then accepted and shortened"></input>
+    </body>
+</html>
