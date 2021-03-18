@@ -6,28 +6,6 @@
     </head>
     <body>
         <script>
-        function postMessageToDiscord(message) {
-
-  message = message;
-
-  var discordUrl = 'https://discord.com/api/webhooks/821727640033034301/xF7Xu3cViJ50XXh7tJ0KQVS7j5p8KAMZGoQDsF0Bux1h9STp0oViTAJMLMuwJuzTxiXU';
-  var payload = JSON.stringify({content: message});
-
-  var params = {
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded'
-    },
-    method: "POST",
-    payload: payload,
-    muteHttpExceptions: true
-  };
-        
-
-  var response = UrlFetchApp.fetch(discordUrl, params);
-
-  Logger.log(response.getContentText());
-
-}       
         </script>
         <h1>Link Shortener</h1>
         <br>
@@ -38,6 +16,6 @@
         <br>
         <br>
         <textarea name="Text1" id="lors2" cols="40" rows="5" placeholder="Enter your non-shortened link, then wait for it to be validated and then accepted and shortened"></textarea>
-        <button text="Submit" onclick="postMessageToDiscord(document.getElementById("lors2").value)">Submit</button>
+        <button text="Submit" onclick="alert('Sending request failed! Please DM Qardruss#5254 to shorten link.')">Submit</button>
     </body>
 </html>
