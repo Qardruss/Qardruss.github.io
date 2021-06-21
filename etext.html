@@ -3,21 +3,6 @@
 <html>
 <head>
 <title>Etext Online Text Editor</title>
-</head>
-<body>
-<input type="text" placeholder="Title of note" id="title">
-<br>
-<button onclick="save()">Save note</button>
-    <br>
-    <button onclick="save_session()">Save temporary note(deleted on leaving page)</button>
-<br>
-<button onclick="load()">Load note</button>
-    <br>
-    <button onclick="load_session()">Load temporary note</button>
-<br>
-<br>
-Text here:
-<textarea id="text" rows="50" cols="50"></textarea>
 <script>
 function save() {
     var title = document.getElementById("title").value;
@@ -54,5 +39,20 @@ function load_session() {
     }
 }
 </script>
+</head>
+<body>
+<input type="text" placeholder="Title of note" id="title">
+<br>
+<button onclick="save()">Save note</button>
+    <br>
+    <button onclick="save_session()">Save temporary note(deleted on leaving page)</button>
+<br>
+<button onclick="load()">Load note</button>
+    <br>
+    <button onclick="load_session()">Load temporary note</button>
+<br>
+<br>
+Text here:
+<textarea id="text" rows="50" cols="50"></textarea>
 </body>
 </html>
