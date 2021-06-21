@@ -33,7 +33,7 @@ function loadg() {
     var title = document.getElementById("title").value;
     var text = sessionStorage.getItem(title);
     if (text == null || text == "undefined" || text == undefined) {
-        document.getElementById("text").value = "Note does not exists";
+        document.getElementById("text").value = "Note does not exist!";
     } else {
         document.getElementById("text").value = text;
     }
