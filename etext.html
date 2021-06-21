@@ -17,7 +17,8 @@ Text here:
 <script>
 function save() {
     var title = document.getElementById("title").value;
-    var text = document.getElementById("text").value;
+    console.log("Saved note");
+    var text = document.getElementById("text").innerHtml;
     window.localStorage.setItem(title,text);
 }
 
@@ -26,8 +27,10 @@ function load() {
     var text = window.localStorage.getItem(title.value)
     if (text == null) {
         getElemntById("text").value = "Note does not exist!";
+        console.log(title.value + " Does not exist")
     } else {
         getElementById("text").value = text;
+        console.log("Exists");
     }
 }
 </script>
