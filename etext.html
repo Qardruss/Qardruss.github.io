@@ -26,10 +26,10 @@ function load() {
     var title = document.getElementById("title")
     var text = localStorage.getItem(title.value)
     if (text == null || text == "undefined" || text == undefined) {
-        getElemntById("text").value = "Note does not exist!";
+        document.getElementById("text").value = "Note does not exist!";
         console.log(title.value + " Does not exist")
     } else {
-        getElementById("text").value = text;
+        document.getElementById("text").value = text;
         console.log("Exists");
     }
 }
