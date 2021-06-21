@@ -18,7 +18,7 @@ Text here:
 function save() {
     var title = document.getElementById("title").value;
     console.log("Saved note");
-    var text = document.getElementById("text").innerHtml;
+    var text = document.getElementById("text").value;
     window.localStorage.setItem(title,text);
 }
 
