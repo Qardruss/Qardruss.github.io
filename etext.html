@@ -8,8 +8,12 @@
 <input type="text" placeholder="Title of note" id="title">
 <br>
 <button onclick="save()">Save note</button>
+    <br>
+    <button onclick="save_session()">Save temporary note(deleted on leaving page)</button>
 <br>
 <button onclick="load()">Load note</button>
+    <br>
+    <button onclick="load_session()">Load temporary note</button>
 <br>
 <br>
 Text here:
@@ -22,9 +26,14 @@ function save() {
     localStorage.setItem(title,text);
 }
 
+function save_session() {
+    var title = document.getElementById("title").value;
+    var text = document.getElementById("text").value;
+    sessionStorage.setItem(title,text);
+
 function load() {
     var title = document.getElementById("title")
-    var text = localStorage.getItem(title.value)
+    if (text    var text = localStorage.getItem(title.value)
     if (text == null || text == "undefined" || text == undefined) {
         document.getElementById("text").value = "Note does not exist!";
         console.log(title.value + " Does not exist")
@@ -33,6 +42,15 @@ function load() {
         console.log("Exists");
     }
 }
+
+function load_session() {
+    var title = document.getElementById("title").value;
+    var text = sessionStorage.getItem(title);
+    if (text == null || text == "undefined" || text == undefined) {
+        document.getElementById("text").value = "Note does not exists";
+    } else {
+        document.getElementById("text").value = text;
+    }
 </script>
 </body>
 </html>
