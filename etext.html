@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Etext Online Text Editor</title>
+</head>
+<body>
+<input type="text" placeholder="Title of note" id="title">
+<br>
+<button onclick="save()">Save note</button>
+<br>
+<button onclick="load()">Load note</button>
+<br>
+<br>
+<input type="text" placeholder="Text here" id="text">
+<script
+function save() {
+    var title = document.getElementById("title").value;
+    var text = document.getElementById("text").value;
+    window.localStorage.setItem(title,text);
+}
+
+function load() {
+    var title = document.getElementById("title")
+    var text = window.localStorage.getItem(title.value)
+    if (text == null) {
+        getElemntById("text").value = "Note does not exist!";
+    } else {
+        getElementById("text").value = text;
+    }
+}
+</script>
+</body>
+</html>
