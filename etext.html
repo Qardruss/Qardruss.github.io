@@ -11,7 +11,7 @@ function save() {
     localStorage.setItem(title,text);
 }
 
-function save_session() {
+function saveg() {
     var title = document.getElementById("title").value;
     var text = document.getElementById("text").value;
     sessionStorage.setItem(title,text);
@@ -29,7 +29,7 @@ function load() {
     }
 }
 
-function load_session() {
+function loadg() {
     var title = document.getElementById("title").value;
     var text = sessionStorage.getItem(title);
     if (text == null || text == "undefined" || text == undefined) {
@@ -45,11 +45,11 @@ function load_session() {
 <br>
 <button onclick="save()">Save note</button>
     <br>
-    <button onclick="save_session()">Save temporary note(deleted on leaving page)</button>
+    <button onclick="saveg()">Save temporary note(deleted on leaving page)</button>
 <br>
 <button onclick="load()">Load note</button>
     <br>
-    <button onclick="load_session()">Load temporary note</button>
+    <button onclick="loadg()">Load temporary note</button>
 <br>
 <br>
 Text here:
