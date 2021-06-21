@@ -25,7 +25,7 @@ function save() {
 function load() {
     var title = document.getElementById("title")
     var text = localStorage.getItem(title.value)
-    if (text == null) {
+    if (text == null || text == "undefined" || text == undefined) {
         getElemntById("text").value = "Note does not exist!";
         console.log(title.value + " Does not exist")
     } else {
