@@ -30,6 +30,7 @@ function save_session() {
     var title = document.getElementById("title").value;
     var text = document.getElementById("text").value;
     sessionStorage.setItem(title,text);
+}
 
 function load() {
     var title = document.getElementById("title")
@@ -51,6 +52,7 @@ function load_session() {
     } else {
         document.getElementById("text").value = text;
     }
+}
 </script>
 </body>
 </html>
